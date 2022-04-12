@@ -39,7 +39,7 @@ jobs:
 
     - name: Obtain VN IP lists
       run: |
-        curl -LR -o dist/chunzhen.txt "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/VN.txt"
+        curl -LR -o dist/vn.txt "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/VN.txt"
 
     - name: Merge and IP lists and remove duplicates
       run: |
