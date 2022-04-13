@@ -38,7 +38,8 @@ jobs:
       run: ./build.sh
 
     - name: Obtain VN IP lists
-      run: |
+      run: | 
+        curl -LR -o dist/ipip_net.txt "https://raw.githubusercontent.com/ongbaoha/vietnam-ip-ranges/master/vietnam-ip-range.txt"
         curl -LR -o dist/vn.txt "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/VN.txt"
 
     - name: Merge and IP lists and remove duplicates
